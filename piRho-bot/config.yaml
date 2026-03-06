@@ -1,0 +1,131 @@
+# =====================================================
+# piRho Crypto Trading Bot Configuration
+# Bybit USDT Perpetual Futures Trading
+# =====================================================
+
+# Bybit API Configuration
+bybit:
+  api_key: ""  # Set via BYBIT_API_KEY env variable
+  api_secret: ""  # Set via BYBIT_API_SECRET env variable
+  testnet: true  # Toggle between testnet (paper) and mainnet (live)
+
+# Trading Configuration
+trading:
+  # Symbols to trade (USDT perpetuals)
+  symbols:
+    - "BTCUSDT"
+    - "ETHUSDT"
+    - "SOLUSDT"
+  
+  # Default symbol if not specified
+  default_symbol: "BTCUSDT"
+  
+  # Leverage settings
+  default_leverage: 5
+  max_leverage: 20
+  
+  # Risk management
+  risk_per_trade_percent: 2.0
+  max_position_percent: 10.0  # Max % of balance in single position
+  max_trades_per_day: 5
+  
+  # Stop loss and take profit
+  stop_loss_percent: 2.0
+  take_profit_percent: 4.0
+  use_trailing_stop: true
+  trailing_stop_percent: 1.5
+  
+  # Chart/Analysis settings
+  chart_timeframe: "15"  # Minutes: 1, 3, 5, 15, 30, 60, 240, D
+  analysis_lookback: 200  # Number of candles to fetch
+  
+  # Signal settings
+  signal_cooldown_minutes: 30  # Minimum time between trades on same symbol
+  strategy_reassessment_hours: 4  # Reassess strategy every N hours
+
+# Trading Flags
+trading_flags:
+  paper_trading: true  # Set to false for live trading
+  auto_execute: false  # If true, execute trades without confirmation
+  enable_sentiment_analysis: true
+  enable_ai_strategy_selection: true
+  use_lstm_model: true
+  enable_loss_analysis: true
+
+# Trailing Stop Loss Configuration
+trailing_stop_loss:
+  type: "PERCENTAGE"  # PERCENTAGE, ATR, or NONE
+  percentage: 15.0
+  atr_multiplier: 2.0
+  use_indicator_exit: true
+  indicator_exit_type: "MA"  # MA or NONE
+  ma_period: 9
+
+# Telegram Bot Configuration
+telegram:
+  bot_token: ""  # Set via TELEGRAM_BOT_TOKEN env variable
+  chat_id: ""  # Set via TELEGRAM_CHAT_ID env variable
+  
+  # Notification settings
+  notify_on_signal: true
+  notify_on_trade: true
+  notify_on_position_update: true
+  notify_on_error: true
+
+# AI Configuration
+ai:
+  # OpenAI API
+  openai_api_key: ""  # Set via OPENAI_API_KEY env variable
+  openai_model: "gpt-4o-mini"  # Options: gpt-4o-mini, gpt-4o, gpt-3.5-turbo
+  
+  # LSTM Model Configuration (Enhanced - Per-Symbol Models)
+  # Models are stored in models/ directory: models/lstm_{SYMBOL}.pt
+  lstm_sequence_length: 30  # Sequence length for LSTM input (recommended: 30-60)
+  lstm_confidence_threshold: 0.65  # Minimum confidence for BUY/SELL signals (0.0-1.0)
+  lstm_auto_train: true  # Automatically train models if missing for a symbol
+  lstm_train_epochs: 100  # Number of training epochs (more = better but slower)
+
+# Sentiment Analysis (Crypto)
+sentiment:
+  # News API for general news
+  news_api_key: ""  # Set via NEWS_API_KEY env variable
+  
+  # CryptoPanic API for crypto-specific news (optional)
+  cryptopanic_api_key: ""  # Set via CRYPTOPANIC_API_KEY env variable
+  
+  # Fear & Greed Index integration
+  use_fear_greed_index: true
+  
+  # Keywords for sentiment analysis
+  keywords:
+    - "Bitcoin"
+    - "Ethereum"
+    - "Crypto"
+    - "Cryptocurrency"
+    - "Fed"
+    - "Interest Rate"
+    - "Regulation"
+    - "SEC"
+    - "ETF"
+    - "Halving"
+    - "Whale"
+    - "DeFi"
+    - "Blockchain"
+
+# Logging Configuration
+logging:
+  level: "INFO"
+  file: "tradingbot.log"
+  max_bytes: 2000000
+  backup_count: 3
+
+# Database Configuration
+database:
+  file: "trades.db"
+  
+# Currency display
+display:
+  quote_currency: "USDT"
+  show_local_currency: true
+  local_currency: "USD"
+

@@ -1,0 +1,55 @@
+# piRho Bot Orchestrator - Systemd Service File
+# 
+# Installation:
+#   1. Copy this file to /etc/systemd/system/pirho-orchestrator.service
+#   2. Update paths and user as needed
+#   3. sudo systemctl daemon-reload
+#   4. sudo systemctl enable pirho-orchestrator
+#   5. sudo systemctl start pirho-orchestrator
+#
+# Management:
+#   sudo systemctl status pirho-orchestrator
+#   sudo systemctl restart pirho-orchestrator
+#   sudo journalctl -u pirho-orchestrator -f
+
+[Unit]
+Description=piRho Multi-Bot Trading Orchestrator
+Documentation=https://github.com/your-repo/piRho
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+
+# Working directory (update to your actual path)
+WorkingDirectory=/home/ubuntu/piRho/piRho-bot
+
+# Environment file
+EnvironmentFile=/home/ubuntu/piRho/piRho-bot/.env
+
+# Start command
+ExecStart=/home/ubuntu/piRho/piRho-bot/venv/bin/python main.py --orchestrator
+
+# Restart policy
+Restart=always
+RestartSec=10
+
+# Graceful shutdown timeout
+TimeoutStopSec=30
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=pirho-orchestrator
+
+# Security hardening
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+PrivateTmp=true
+ReadWritePaths=/home/ubuntu/piRho/piRho-bot
+
+[Install]
+WantedBy=multi-user.target
+

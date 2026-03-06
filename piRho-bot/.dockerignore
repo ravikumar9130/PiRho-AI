@@ -1,0 +1,54 @@
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info
+dist
+build
+.venv
+venv
+env
+.env
+.env.local
+*.log
+.git
+.gitignore
+README.md
+.idea
+.vscode
+*.swp
+*.swo
+*~
+news_cache/*
+!news_cache/.gitkeep
+models/*
+!models/.gitkeep
+*.xlsx
+*.pt
+state.json
+# Training scripts (not needed in production)
+train_lstm*.py
+backtester.py
+# Documentation
+*.md
+SAAS_BUSINESS_PLAN.md
+CAPABILITIES_AND_FLOW.md
+LSTM_GUIDE.md
+# Service files
+*.service
+# Logs
+tradingbot.log
+orchestrator.log
+# Cache and state
+news_cache/*.json
+# Docker files (not needed in image, but keep for build context)
+# Dockerfile
+# .dockerignore
+koyeb.yaml
+fly.toml
+# Keep requirements.txt out (we use requirements-runtime.txt)
+requirements.txt
+

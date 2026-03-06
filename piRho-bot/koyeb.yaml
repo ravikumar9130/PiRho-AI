@@ -1,0 +1,35 @@
+# Koyeb configuration for piRho Bot Orchestrator
+# This file is optional - Koyeb can also be configured via the dashboard
+
+name: pirho-bot
+type: worker
+
+# Build configuration
+build:
+  type: dockerfile
+  dockerfile: Dockerfile
+
+# Runtime configuration
+run:
+  command: python main.py --orchestrator
+
+# No HTTP port needed for worker service
+# This is a long-running background process
+
+# Health check (HTTP endpoint on port 8000)
+healthcheck:
+  type: http
+  path: /health
+  port: 8000
+  interval: 60
+  timeout: 10
+  initial_delay: 120
+
+# Scaling (optional - typically 1 instance for orchestrator)
+# instances:
+#   min: 1
+#   max: 1
+
+# Environment variables should be set in Koyeb dashboard
+# See KOYEB_DEPLOYMENT.md for details
+

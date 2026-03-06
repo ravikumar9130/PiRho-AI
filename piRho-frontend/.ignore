@@ -1,0 +1,5 @@
+# Ignore for Cursor
+node_modules/
+.next/
+.env.local
+

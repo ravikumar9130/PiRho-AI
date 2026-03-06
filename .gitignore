@@ -1,0 +1,35 @@
+# Node
+node_modules/
+.next/
+dist/
+build/
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+secrets.yaml
+
+# Models and Large Files
+models/*.pt
+models/*.json
+news_cache/
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+.gemini/
+.agent/
+.system_generated/

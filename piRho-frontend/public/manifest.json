@@ -1,0 +1,49 @@
+{
+  "name": "piRho - AI-Powered Crypto Trading",
+  "short_name": "piRho",
+  "description": "Institutional-grade automated trading for crypto futures with LSTM neural networks and 11 battle-tested strategies.",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#10b981",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["finance", "business"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Dashboard",
+      "short_name": "Dashboard",
+      "description": "View your trading dashboard",
+      "url": "/dashboard",
+      "icons": [{ "src": "/icon.svg", "sizes": "96x96" }]
+    },
+    {
+      "name": "Trading Bots",
+      "short_name": "Bots",
+      "description": "Manage your trading bots",
+      "url": "/dashboard/bots",
+      "icons": [{ "src": "/icon.svg", "sizes": "96x96" }]
+    }
+  ]
+}
+

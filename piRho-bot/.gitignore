@@ -1,0 +1,5 @@
+__pycache__
+.env
+news_cache
+trade_log.xlsx
+tradingbot.log

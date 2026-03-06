@@ -1,0 +1,57 @@
+# =====================================================
+# piRho Crypto Trading Bot - Runtime Dependencies
+# (PyTorch excluded for smaller Docker image)
+# =====================================================
+
+# Core Trading - Bybit API
+pybit>=5.6.0
+
+# Data Processing
+pandas>=2.2.0
+numpy>=1.26.0
+
+# Technical Indicators (optional - install if Python < 3.14)
+# pandas-ta>=0.3.14b  # Requires numba which needs Python <3.14
+
+# AI Integration
+openai>=1.0.0
+aiohttp>=3.9.0
+
+# Sentiment Analysis
+textblob>=0.18.0
+newsapi-python>=0.2.7
+
+# Telegram Bot
+python-telegram-bot>=20.0
+httpx>=0.25.0
+
+# Configuration & Environment
+python-dotenv>=1.0.0
+PyYAML>=6.0.0
+
+# HTTP & Networking
+requests>=2.31.0
+
+# Excel/Reporting
+openpyxl>=3.1.2
+
+# Utilities
+asyncio-throttle>=1.0.0
+
+# =====================================================
+# Orchestrator Mode Dependencies (for SaaS deployment)
+# =====================================================
+
+# Supabase Client (for database access)
+supabase>=2.0.0
+
+# Cryptography (for credential decryption)
+cryptography>=41.0.0
+
+# =====================================================
+# Optional: PyTorch for LSTM predictions
+# Uncomment and install separately if needed:
+# pip install torch --index-url https://download.pytorch.org/whl/cpu
+# This adds ~500MB to the image (CPU-only version)
+# =====================================================
+
