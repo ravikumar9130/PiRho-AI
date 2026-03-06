@@ -1,6 +1,6 @@
 # piRho: The AI-Powered Crypto Trading SaaS Ecosystem
 
-![piRho Hero](/Users/ravikumar/.gemini/antigravity/brain/79d6cf85-ecaa-4655-8e8b-a5b7ba84f7af/pirho_dashboard_mockup_1772799359028.png)
+![piRho Hero](./static/dashboard_mockup.png)
 
 ## 🚀 Overview
 **piRho** is a comprehensive, institutional-grade SaaS ecosystem designed to revolutionize automated cryptocurrency trading. By combining **Deep Learning (LSTM)**, **Generative AI (LLMs)**, and **Multi-Source Sentiment Analysis**, piRho solves the critical problem of market adaptability in the volatile 24/7 crypto landscape.
@@ -30,7 +30,7 @@ The product is split into three core engineering pillars:
 
 ## 🛠️ Integrated System Architecture
 
-![System Architecture](/Users/ravikumar/.gemini/antigravity/brain/79d6cf85-ecaa-4655-8e8b-a5b7ba84f7af/pirho_ai_architecture_1772799374261.png)
+![System Architecture](./static/ai_architecture.png)
 
 ### 1. piRho-bot (The Alpha Engine)
 *   **Execution**: Bybit USDT Perpetual Futures.
@@ -64,7 +64,7 @@ The product is split into three core engineering pillars:
 4.  **Execution**: `BotOrchestrator` triggers an asyncio task; `Agents` handle order placement and dynamic Stop Loss/Take Profit.
 5.  **Notification**: User receives a beautiful alert via the **Telegram Bot**.
 
-![Telegram Interface](/Users/ravikumar/.gemini/antigravity/brain/79d6cf85-ecaa-4655-8e8b-a5b7ba84f7af/pirho_telegram_bot_mockup_1772799395070.png)
+![Telegram Interface](./static/telegram_mockup.png)
 
 ---
 
