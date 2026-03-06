@@ -1,6 +1,7 @@
 # piRho: The AI-Powered Crypto Trading SaaS Ecosystem
 
 [![Watch the Demo](https://img.shields.io/badge/Demo-Google_Drive-blueviolet?style=for-the-badge&logo=googledrive)](https://drive.google.com/file/d/1J9ZDGzvZplxPHaNkRqIgG0A3A7Af6bAb/view?usp=sharing)
+[![Live App](https://img.shields.io/badge/Live-piRho_App-success?style=for-the-badge&logo=vercel)](https://pirho.vercel.app/)
 
 
 ![piRho Hero](./static/dashboard_mockup.png)
