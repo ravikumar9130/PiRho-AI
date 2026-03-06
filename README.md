@@ -69,7 +69,9 @@ The product is split into three core engineering pillars:
 ---
 
 ## 🎥 Demonstration
-[![Watch the Demo](https://img.shields.io/badge/Demo-Loom_Video-blueviolet?style=for-the-badge&logo=loom)](https://loom.com/share/your-placeholder-link)
+```markdown
+[![Watch the Demo](https://img.shields.io/badge/Demo-Google_Drive-blueviolet?style=for-the-badge&logo=googledrive)](https://drive.google.com/file/d/1J9ZDGzvZplxPHaNkRqIgG0A3A7Af6bAb/view?usp=sharing)
+```
 *Note: This video covers the full end-to-end flow from dashboard configuration to live trade execution.*
 
 ---
